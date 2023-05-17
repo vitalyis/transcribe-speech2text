@@ -1,5 +1,5 @@
 import streamlit as st
-from google.cloud import speech_v1p1beta1 as speech
+from google.cloud import speech_v1 as speech
 import os
 
 # Set up Google Cloud credentials (replace 'path_to_service_account_key.json' with your own key file)
