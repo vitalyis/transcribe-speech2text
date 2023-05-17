@@ -23,7 +23,7 @@ def transcribe_speech(audio_file, accent):
             language_code="en-IN",
             use_enhanced=True,
             model="video",
-            metadata={"interactionType": "DISCUSSION", "industryNaicsCodeOfAudio": 54},
+            metadata={"industryNaicsCodeOfAudio": 54},
             diarization_config=speech.SpeakerDiarizationConfig(
                 enable_speaker_diarization=True,
                 min_speaker_count=2,
