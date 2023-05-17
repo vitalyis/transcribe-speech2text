@@ -1,7 +1,6 @@
 import streamlit as st
 from google.cloud import speech_v1p1beta1 as speech
 import os
-import soundfile as sf
 
 # Set up Google Cloud credentials (replace 'path_to_service_account_key.json' with your own key file)
 os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "loyal-surfer-333701-b1b753aa1fde.json"
@@ -9,21 +8,9 @@ os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "loyal-surfer-333701-b1b753aa1fde
 # Create a client for the Google Cloud Speech-to-Text API
 client = speech.SpeechClient()
 
-# Function to convert audio file to MP3 format
-def convert_to_wav(input_file, output_file):
-    st.spinner("Converting audio file...")
-    data, samplerate = sf.read(input_file)
-    sf.write(output_file, data, samplerate, format="wav")
-
 # Function to transcribe speech from audio file
 def transcribe_speech(audio_file, accent):
     with st.spinner("Transcribing speech..."):
-        # Convert M4A to WAV if needed
-        if audio_file.endswith(".m4a"):
-            wav_file = audio_file[:-4] + ".wav"
-            convert_to_wav(audio_file, wav_file)
-            audio_file = wav_file
-
         # Load audio file
         with open(audio_file, "rb") as file:
             content = file.read()
@@ -31,11 +18,11 @@ def transcribe_speech(audio_file, accent):
         # Configure speech recognition request
         audio = speech.RecognitionAudio(content=content)
         config = speech.RecognitionConfig(
-            encoding=speech.RecognitionConfig.AudioEncoding.LINEAR16,
+            encoding=speech.RecognitionConfig.AudioEncoding.MP3,
             sample_rate_hertz=16000,
             language_code="en-IN",
             use_enhanced=True,
-            model="video",
+            model="default",
             metadata={"interaction_type": "DISCUSSION"},
             diarization_config=speech.SpeakerDiarizationConfig(
                 enable_speaker_diarization=True,
@@ -61,7 +48,7 @@ def main():
     st.write("Upload an audio file to transcribe.")
 
     # File upload
-    audio_file = st.file_uploader("Upload Audio File", type=["m4a"])
+    audio_file = st.file_uploader("Upload Audio File", type=["mp3", "wav"])
 
     # Accent selection
     accent = st.text_input("Accent (Optional)")
@@ -78,9 +65,8 @@ def main():
             # Display the transcription
             st.success("Transcription:")
             st.write(transcription)
-            # Delete the temporary files
+            # Delete the temporary file
             os.remove(temp_file)
-            os.remove(mp3_file)
         else:
             st.error("Please upload an audio file.")
 
