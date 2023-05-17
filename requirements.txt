@@ -16,6 +16,7 @@ imageio==2.28.1
 importlib-metadata==6.6.0
 Jinja2==3.1.2
 jsonschema==4.17.3
+ffmpeg==1.4
 lazy_loader==0.2
 markdown-it-py==2.2.0
 MarkupSafe==2.1.2
