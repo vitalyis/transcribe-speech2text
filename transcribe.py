@@ -22,7 +22,7 @@ def transcribe_speech(audio_file, accent):
             sample_rate_hertz=16000,
             language_code="en-IN",
             use_enhanced=True,
-            model="video",
+            model="default",
             metadata={"interaction_type": "DISCUSSION"},
             diarization_config=speech.SpeakerDiarizationConfig(
                 enable_speaker_diarization=True,
@@ -41,7 +41,6 @@ def transcribe_speech(audio_file, accent):
         # Extract and return transcriptions
         transcriptions = [result.alternatives[0].transcript for result in response.results]
         return "\n".join(transcriptions)
-
 
 # Streamlit app
 def main():
@@ -70,7 +69,6 @@ def main():
             os.remove(temp_file)
         else:
             st.error("Please upload an audio file.")
-
 
 if __name__ == "__main__":
     main()
