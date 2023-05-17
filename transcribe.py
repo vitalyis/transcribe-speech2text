@@ -1,7 +1,7 @@
 import streamlit as st
 from google.cloud import speech_v1p1beta1 as speech
+from pydub import AudioSegment
 import os
-import audioread
 
 # Set up Google Cloud credentials (replace 'path_to_service_account_key.json' with your own key file)
 os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "loyal-surfer-333701-b1b753aa1fde.json"
@@ -10,9 +10,9 @@ os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "loyal-surfer-333701-b1b753aa1fde
 client = speech.SpeechClient()
 
 # Function to convert audio file to MP3 format
-def convert_to_mp3(input_file, output_file):
+def convert_to_wav(input_file, output_file):
     audio = AudioSegment.from_file(input_file)
-    audio.export(output_file, format="mp3")
+    audio.export(output_file, format="wav")
 
 # Function to transcribe speech from audio file
 def transcribe_speech(audio_file, accent):
@@ -20,10 +20,7 @@ def transcribe_speech(audio_file, accent):
         # Convert M4A to WAV if needed
         if audio_file.endswith(".m4a"):
             wav_file = audio_file[:-4] + ".wav"
-            with audioread.audio_open(audio_file) as src:
-                with audioread.audio_write(wav_file, src.channels, src.samplerate, "wav") as dst:
-                    for buf in src:
-                        dst.write(buf)
+            convert_to_wav(audio_file, wav_file)
             audio_file = wav_file
 
         # Load audio file
