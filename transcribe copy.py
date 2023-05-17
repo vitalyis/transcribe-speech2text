@@ -1,5 +1,5 @@
 import streamlit as st
-from google.cloud import speech_v1p1beta1 as speech
+from google.cloud import speech
 import os
 
 # Set up Google Cloud credentials (replace 'path_to_service_account_key.json' with your own key file)
@@ -30,7 +30,7 @@ def transcribe_speech(audio_file, accent):
                 max_speaker_count=6,
             ),
         )
-
+        
         # Specify accent hint if provided
         if accent:
             config.speech_contexts[0].phrases.append(accent)
@@ -41,7 +41,6 @@ def transcribe_speech(audio_file, accent):
         # Extract and return transcriptions
         transcriptions = [result.alternatives[0].transcript for result in response.results]
         return "\n".join(transcriptions)
-
 
 # Streamlit app
 def main():
@@ -70,7 +69,6 @@ def main():
             os.remove(temp_file)
         else:
             st.error("Please upload an audio file.")
-
 
 if __name__ == "__main__":
     main()
