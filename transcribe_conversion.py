@@ -4,7 +4,7 @@ import os
 import soundfile as sf
 
 # Set up Google Cloud credentials (replace 'path_to_service_account_key.json' with your own key file)
-os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "loyal-surfer-333701-b1b753aa1fde.json"
+os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "service_account_key.json"
 
 # Create a client for the Google Cloud Speech-to-Text API
 client = speech.SpeechClient()

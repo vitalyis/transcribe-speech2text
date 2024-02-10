@@ -1,0 +1,17 @@
+# Python specific
+*.pyc
+*.pyo
+__pycache__/
+
+# Jupyter Notebook specific
+.ipynb_checkpoints
+
+# System or IDE files
+.DS_Store
+Thumbs.db
+
+# Python virtual environment
+venv/
+
+# Google Cloud service account key
+loyal-surfer-333701-b1b753aa1fde.json
