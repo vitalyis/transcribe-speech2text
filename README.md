@@ -56,9 +56,7 @@ The transcribe-speech2text project is a web application built with Streamlit tha
 
 ##  Getting Started
 
-***Requirements***
-
-Ensure you have the following dependencies installed on your system:
+### Prerequisites
 
 * **Python**: `version 3.7`
 
