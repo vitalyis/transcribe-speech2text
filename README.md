@@ -124,16 +124,7 @@ pip install -r requirements.txt
 Use the following command to run transcribe-speech2text:
 
 ```sh
-python y
-```
-
-###  Tests
-
-Use the following command to run tests:
-
-```sh
-pytest
-
+python transcribe.py
 ```
 
 ##  Contributing
@@ -179,9 +170,6 @@ This project is protected under the MIT (https://choosealicense.com/licenses) Li
 
 ---
 
-##  Acknowledgments
-
-- List any resources, contributors, inspiration, etc. here.
 
 [**Return**](#-quick-links)
 
