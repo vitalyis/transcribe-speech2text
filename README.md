@@ -22,41 +22,20 @@
 ##  Quick Links
 
 > - [ Overview](#-overview)
-> - [ Features](#-features)
 > - [ Repository Structure](#-repository-structure)
 > - [ Modules](#-modules)
 > - [ Getting Started](#-getting-started)
 >   - [ Installation](#-installation)
 >   - [Running transcribe-speech2text](#-running-transcribe-speech2text)
 >   - [ Tests](#-tests)
-> - [ Project Roadmap](#-project-roadmap)
 > - [ Contributing](#-contributing)
 > - [ License](#-license)
-> - [ Acknowledgments](#-acknowledgments)
 
 ---
 
 ##  Overview
 
 The transcribe-speech2text project is a web application built with Streamlit that leverages the Google Cloud Speech-to-Text API to transcribe speech from audio files. Its core functionality is to allow users to upload audio files, specify an accent, and initiate the transcription process. The project handles the complete transcription process, from file uploading to displaying the transcription results. It also includes functionality for converting audio files to WAV format and incorporates features for user interaction. With its integration of the Google Cloud Speech-to-Text API, transcribe-speech2text provides an efficient and user-friendly solution for transcribing audio content into text.
-
-
-
----
-
-##  Features
-
-|    |   Feature         | Description |
-|----|-------------------|---------------------------------------------------------------|
-| ⚙️  | **Architecture**  | This project utilizes the Google Cloud Speech-to-Text API to transcribe speech from audio files. It includes a Streamlit app for user interaction. The architecture follows a client-server model, with the client uploading audio files and receiving transcriptions from the server. The codebase consists of Python scripts for audio conversion and transcription. |
-| 🔩 | **Code Quality**  | The code quality is good, following Python best practices. The code is well-organized with clear variable and function names. Proper error handling and logging are implemented. Code formatting adheres to the PEP8 style guide. |
-| 📄 | **Documentation** | The project has limited documentation. The code snippets have comments explaining their functionality, but a more comprehensive documentation with setup instructions, usage guide, and API reference would be beneficial. |
-| 🔌 | **Integrations**  | The project is tightly integrated with the Google Cloud Speech-to-Text API for audio transcription. It also utilizes external dependencies such as Streamlit, OpenCV, Tornado, and PyWavelets. |
-| 🧩 | **Modularity**    | The codebase has modular components, allowing for reusability. The transcribe.py and transcribe_conversion.py scripts can be used independently for speech transcription tasks. However, further refactoring and separation of concerns could enhance modularity. |
-| 🧪 | **Testing**       | No testing frameworks or tools are mentioned in the codebase or repository. Implementing unit tests with tools like pytest would improve the reliability and maintainability of the codebase. |
-| ⚡️  | **Performance**   | The performance depends on the Google Cloud Speech-to-Text API for audio transcription. The codebase itself does not have performance-specific features or optimizations. The resource usage is mainly dependent on the server infrastructure and the size/compression of the audio files being processed. |
-| 🛡️ | **Security**      | The project does not mention specific security measures in the codebase or repository. However, if sensitive data is involved, appropriate security practices such as encryption, access controls, and secure storage should be implemented. |
-| 📦 | **Dependencies**  | The project utilizes a variety of external libraries and dependencies, including Altair, OpenCV, Tornado, PyArrow, GitPython, and Google Cloud Speech. The full list of dependencies can be found in the requirements.txt file. |
 
 
 ---
