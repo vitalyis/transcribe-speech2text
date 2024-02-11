@@ -5,7 +5,7 @@
     <h1 align="center">TRANSCRIBE-SPEECH2TEXT</h1>
 </p>
 <p align="center">
-    <em>Transform Speech into Text with Transcribe-Speech2Text!</em>
+    <em>Transform Speech into Text using Google Cloud Speech</em>
 </p>
 <p align="center">
 	<img src="https://img.shields.io/github/license/vitalyis/transcribe-speech2text?style=flat&color=0080ff" alt="license">
