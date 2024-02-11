@@ -5,7 +5,7 @@
     <h1 align="center">TRANSCRIBE-SPEECH2TEXT</h1>
 </p>
 <p align="center">
-    <em>Speech2Text: Transforming Audio into Powerful Text</em>
+    <em>Transform Speech into Text with Transcribe-Speech2Text!</em>
 </p>
 <p align="center">
 	<img src="https://img.shields.io/github/license/vitalyis/transcribe-speech2text?style=flat&color=0080ff" alt="license">
@@ -16,16 +16,7 @@
 <p align="center">
 		<em>Developed with the software and tools below.</em>
 </p>
-<p align="center">
-	<img src="https://img.shields.io/badge/GNU%20Bash-4EAA25.svg?style=flat&logo=GNU-Bash&logoColor=white" alt="GNU%20Bash">
-	<img src="https://img.shields.io/badge/Streamlit-FF4B4B.svg?style=flat&logo=Streamlit&logoColor=white" alt="Streamlit">
-	<img src="https://img.shields.io/badge/Jinja-B41717.svg?style=flat&logo=Jinja&logoColor=white" alt="Jinja">
-	<img src="https://img.shields.io/badge/SciPy-8CAAE6.svg?style=flat&logo=SciPy&logoColor=white" alt="SciPy">
-	<img src="https://img.shields.io/badge/Python-3776AB.svg?style=flat&logo=Python&logoColor=white" alt="Python">
-	<img src="https://img.shields.io/badge/pandas-150458.svg?style=flat&logo=pandas&logoColor=white" alt="pandas">
-	<img src="https://img.shields.io/badge/NumPy-013243.svg?style=flat&logo=NumPy&logoColor=white" alt="NumPy">
-	<img src="https://img.shields.io/badge/FFmpeg-007808.svg?style=flat&logo=FFmpeg&logoColor=white" alt="FFmpeg">
-</p>
+
 <hr>
 
 ##  Quick Links
@@ -49,21 +40,23 @@
 
 The transcribe-speech2text project is a web application built with Streamlit that leverages the Google Cloud Speech-to-Text API to transcribe speech from audio files. Its core functionality is to allow users to upload audio files, specify an accent, and initiate the transcription process. The project handles the complete transcription process, from file uploading to displaying the transcription results. It also includes functionality for converting audio files to WAV format and incorporates features for user interaction. With its integration of the Google Cloud Speech-to-Text API, transcribe-speech2text provides an efficient and user-friendly solution for transcribing audio content into text.
 
+
+
 ---
 
 ##  Features
 
 |    |   Feature         | Description |
 |----|-------------------|---------------------------------------------------------------|
-| ⚙️  | **Architecture**  | The project follows a client-server architecture, where the Streamlit web application serves as the client and interacts with the Google Cloud Speech-to-Text API for speech recognition and conversion. The codebase is organized using modular file structures. |
-| 🔩 | **Code Quality**  | The code quality is good with well-structured code and adherence to coding standards. The codebase includes comments and variable naming conventions are followed. |
-| 📄 | **Documentation** | The project has decent documentation with a README file explaining the functionality and usage of the application. Comments are present in the codebase, but additional documentation could be added to improve clarity. |
-| 🔌 | **Integrations**  | The project heavily integrates with the Google Cloud Speech-to-Text API for speech recognition and conversion. Other integrations include Streamlit for the web application interface and various Python libraries for audio file conversion and manipulation. |
-| 🧩 | **Modularity**    | The codebase exhibits modularity, with separate files for audio conversion, transcribing, and the Streamlit web application. This allows for easier code maintenance and reusability. |
-| 🧪 | **Testing**       | The project does not explicitly mention testing frameworks or tools used. Additional testing could be incorporated to ensure the functionality of the application. |
-| ⚡️  | **Performance**   | The performance of the application heavily depends on the Google Cloud Speech-to-Text API for speech recognition and conversion. The speed and efficiency of the transcriptions are subject to Google's API performance. |
-| 🛡️ | **Security**      | The project does not mention specific security measures. However, it is important to ensure that appropriate access controls and data protection measures are in place when using the Google Cloud Speech-to-Text API. |
-| 📦 | **Dependencies**  | Key dependencies include pyarrow, scipy, numpy, google-cloud-speech, streamlit, and other libraries for audio file manipulation and libraries for web application development. |
+| ⚙️  | **Architecture**  | This project utilizes the Google Cloud Speech-to-Text API to transcribe speech from audio files. It includes a Streamlit app for user interaction. The architecture follows a client-server model, with the client uploading audio files and receiving transcriptions from the server. The codebase consists of Python scripts for audio conversion and transcription. |
+| 🔩 | **Code Quality**  | The code quality is good, following Python best practices. The code is well-organized with clear variable and function names. Proper error handling and logging are implemented. Code formatting adheres to the PEP8 style guide. |
+| 📄 | **Documentation** | The project has limited documentation. The code snippets have comments explaining their functionality, but a more comprehensive documentation with setup instructions, usage guide, and API reference would be beneficial. |
+| 🔌 | **Integrations**  | The project is tightly integrated with the Google Cloud Speech-to-Text API for audio transcription. It also utilizes external dependencies such as Streamlit, OpenCV, Tornado, and PyWavelets. |
+| 🧩 | **Modularity**    | The codebase has modular components, allowing for reusability. The transcribe.py and transcribe_conversion.py scripts can be used independently for speech transcription tasks. However, further refactoring and separation of concerns could enhance modularity. |
+| 🧪 | **Testing**       | No testing frameworks or tools are mentioned in the codebase or repository. Implementing unit tests with tools like pytest would improve the reliability and maintainability of the codebase. |
+| ⚡️  | **Performance**   | The performance depends on the Google Cloud Speech-to-Text API for audio transcription. The codebase itself does not have performance-specific features or optimizations. The resource usage is mainly dependent on the server infrastructure and the size/compression of the audio files being processed. |
+| 🛡️ | **Security**      | The project does not mention specific security measures in the codebase or repository. However, if sensitive data is involved, appropriate security practices such as encryption, access controls, and secure storage should be implemented. |
+| 📦 | **Dependencies**  | The project utilizes a variety of external libraries and dependencies, including Altair, OpenCV, Tornado, PyArrow, GitPython, and Google Cloud Speech. The full list of dependencies can be found in the requirements.txt file. |
 
 
 ---
@@ -73,7 +66,7 @@ The transcribe-speech2text project is a web application built with Streamlit tha
 ```sh
 └── transcribe-speech2text/
     ├── LICENSE
-    ├── Readme.txt
+    ├── README.md
     ├── github_script.sh
     ├── requirements.txt
     ├── setup.sh
@@ -83,18 +76,16 @@ The transcribe-speech2text project is a web application built with Streamlit tha
 
 ---
 
-##  Modules
 
-<details closed><summary>.</summary>
 
-| File                                                                                                                | Summary                                                                                                                                                                                                                                                                                                                                                    |
-| ---                                                                                                                 | ---                                                                                                                                                                                                                                                                                                                                                        |
-| [setup.sh](https://github.com/vitalyis/transcribe-speech2text/blob/master/setup.sh)                                 | The code in `setup.sh` creates a directory `~/.streamlit/` and a configuration file `config.toml`. It sets the path of the `ffmpeg` executable to `/usr/bin/ffmpeg`. This is part of the `transcribe-speech2text` repository's setup process.                                                                                                              |
-| [requirements.txt](https://github.com/vitalyis/transcribe-speech2text/blob/master/requirements.txt)                 | The `transcribe.py` code snippet in the `transcribe-speech2text` repository is a critical component that transcribes speech to text. It utilizes the Google Cloud Speech-to-Text API for speech recognition and conversion. This code integrates with other files in the repository to deliver the functionality.                                          |
-| [transcribe.py](https://github.com/vitalyis/transcribe-speech2text/blob/master/transcribe.py)                       | This code snippet, `transcribe.py`, is responsible for transcribing speech from an audio file using the Google Cloud Speech-to-Text API. It interacts with `streamlit`, Google Cloud's `speech_v1p1beta1` library, and handles the transcription process, including audio file uploading, accent selection, and displaying the transcription results.      |
-| [Readme.txt](https://github.com/vitalyis/transcribe-speech2text/blob/master/Readme.txt)                             | The `transcribe.py` script in the `transcribe-speech2text` repository is a web application built with Streamlit that transcribes speech from audio files using the Google Cloud Speech-to-Text API. It allows users to upload audio files, specify an accent, and initiate the transcription process. Temporary files are automatically deleted after use. |
-| [github_script.sh](https://github.com/vitalyis/transcribe-speech2text/blob/master/github_script.sh)                 | The code snippet in github_script.sh automates pushing content to a GitHub repository and creating a requirements file for the online repository.                                                                                                                                                                                                          |
-| [transcribe_conversion.py](https://github.com/vitalyis/transcribe-speech2text/blob/master/transcribe_conversion.py) | The `transcribe_conversion.py` code snippet in the `transcribe-speech2text` repository is responsible for converting audio files to WAV format and transcribing speech using the Google Cloud Speech-to-Text API. It includes functions for converting, transcribing, and a Streamlit app for user interaction.                                            |
+
+| File                                                                                                                | Summary                                                                                                                                                                                                                                                                                                                                                     |
+| ---                                                                                                                 | ---                                                                                                                                                                                                                                                                                                                                                         |
+| [setup.sh](https://github.com/vitalyis/transcribe-speech2text/blob/master/setup.sh)                                 | The `setup.sh` script creates a directory and sets up the config file for the `transcribe-speech2text` repository, specifically the `transcribe.py` script's dependency on ffmpeg for audio conversion.                                                                                                                                                     |
+| [requirements.txt](https://github.com/vitalyis/transcribe-speech2text/blob/master/requirements.txt)                 | The code snippet `transcribe.py` is a critical feature of the parent repository's architecture. It handles the transcription of speech to text using the Google Cloud Speech API. It plays a vital role in processing audio files and converting them into textual data.                                                                                    |
+| [transcribe.py](https://github.com/vitalyis/transcribe-speech2text/blob/master/transcribe.py)                       | The `transcribe.py` code snippet in the `transcribe-speech2text` repository is responsible for transcribing speech from an audio file. It utilizes the Google Cloud Speech-to-Text API to perform the transcription. The code allows for the uploading of audio files, selection of accents (optional), and displays the transcriptions in a Streamlit app. |
+| [github_script.sh](https://github.com/vitalyis/transcribe-speech2text/blob/master/github_script.sh)                 | The `github_script.sh` file in the `transcribe-speech2text` repository automates pushing content to GitHub and creating/pushing a requirements file. It sets the origin URL, pushes to GitHub, creates the requirements.txt file, commits, and pushes to the main branch.                                                                                   |
+| [transcribe_conversion.py](https://github.com/vitalyis/transcribe-speech2text/blob/master/transcribe_conversion.py) | This code snippet, located in the transcribe_conversion.py file, is responsible for transcribing speech from an audio file. It utilizes the Google Cloud Speech-to-Text API to convert the audio file to WAV format, configure the speech recognition request, and extract transcriptions. The code also includes a Streamlit app for user interaction.     |
 
 </details>
 
@@ -133,7 +124,7 @@ pip install -r requirements.txt
 Use the following command to run transcribe-speech2text:
 
 ```sh
-python main.py
+python y
 ```
 
 ###  Tests
@@ -142,17 +133,8 @@ Use the following command to run tests:
 
 ```sh
 pytest
+
 ```
-
----
-
-##  Project Roadmap
-
-- [X] `► INSERT-TASK-1`
-- [ ] `► INSERT-TASK-2`
-- [ ] `► ...`
-
----
 
 ##  Contributing
 
